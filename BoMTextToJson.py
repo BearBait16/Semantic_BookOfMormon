@@ -15,6 +15,10 @@ for verses in verses_split_file:
         "Text": text
     }
     json_data.append(data)
+    print(title)
+    x += 1
 
 with open('BomJson.json', 'w') as file:
-    json.dump(data, file)
+    json.dump(json_data, file)
+
+print(f"There are {x} verses")
